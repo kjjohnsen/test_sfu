@@ -16,7 +16,7 @@ const config = {
 const signalLocal = new Signal.IonSFUJSONRPCSignal(serverURL);
 const clientLocal = new IonSDK.Client(signalLocal, config);
 
-signalLocal.onopen = () => clientLocal.join("test session");
+signalLocal.onopen = () => clientLocal.join("defaultroom");
 
 const start = (type) => {
   if (type) {
