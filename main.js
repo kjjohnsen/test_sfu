@@ -23,6 +23,7 @@ const start = (type) => {
     IonSDK.LocalStream.getUserMedia({
       resolution: "vga",
       audio: true,
+      video: true,
       codec: "vp8",
     }).then((media) => {
       pubVideo.srcObject = media;
@@ -35,8 +36,8 @@ const start = (type) => {
     }).catch(console.error);
   } else {
     IonSDK.LocalStream.getDisplayMedia({
-      resolution: "vga",
       audio: true,
+      video: {width:1280,height:720,frameRate: {max: 30}},
       codec: "vp8",
     }).then((media) => {
       pubVideo.srcObject = media;
