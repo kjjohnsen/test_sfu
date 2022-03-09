@@ -37,8 +37,8 @@ const start = (type) => {
   } else {
     IonSDK.LocalStream.getDisplayMedia({
       audio: true,
-      video: {width:1280,height:720,frameRate: {max: 30}},
-      codec: "vp8",
+      video: true,
+      codec: "h264",
     }).then((media) => {
       pubVideo.srcObject = media;
       pubVideo.autoplay = true;
