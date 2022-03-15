@@ -57,7 +57,7 @@ clientLocal.ontrack = (track, stream) => {
    track.onunmute = () => {
     subVideo.srcObject = stream;
     subVideo.autoplay = true;
-    subVideo.muted = false;
+    subVideo.muted = true;
     
     subVideo.play();
 
