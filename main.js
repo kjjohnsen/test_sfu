@@ -53,13 +53,13 @@ const start = (type) => {
 
 clientLocal.ontrack = (track, stream) => {
    console.log("got track: ", track.id, "for stream: ", stream.id);
-   videoEl = document.querySelector('#sub_video');
-   videoEl.play();
+   
    track.onunmute = () => {
     subVideo.srcObject = stream;
     subVideo.autoplay = true;
     subVideo.muted = false;
     
+    subVideo.play();
 
   stream.onremovetrack = () => {
     subVideo.srcObject = null;
