@@ -1,4 +1,5 @@
-const roomName = URLSearchParams.get("room");
+let params = new URLSearchParams(document.location.search);
+const roomName = params.get("room");
 const pubVideo = document.getElementById("pub_video");
 const subVideo = document.getElementById("sub_video");
 const bntPubCam = document.getElementById("bnt_pubcam");
