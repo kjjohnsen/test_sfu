@@ -1,3 +1,4 @@
+const roomName = URLSearchParams.get("room");
 const pubVideo = document.getElementById("pub_video");
 const subVideo = document.getElementById("sub_video");
 const bntPubCam = document.getElementById("bnt_pubcam");
@@ -16,7 +17,7 @@ const config = {
 const signalLocal = new Signal.IonSFUJSONRPCSignal(serverURL);
 const clientLocal = new IonSDK.Client(signalLocal, config);
 
-signalLocal.onopen = () => clientLocal.join("defaultroom");
+signalLocal.onopen = () => clientLocal.join(roomName);
 
 const start = (type) => {
   if (type) {
