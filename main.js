@@ -38,7 +38,7 @@ const start = (type) => {
     IonSDK.LocalStream.getDisplayMedia({
       audio: true,
       video: true,
-      codec: "h264",
+      codec: "vp8",
     }).then((media) => {
       pubVideo.srcObject = media;
       pubVideo.autoplay = true;
