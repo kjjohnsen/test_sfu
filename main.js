@@ -59,6 +59,7 @@ clientLocal.ontrack = (track, stream) => {
 stream.unmute();
 if(track.kind === "video"){
    subVideo.srcObject = stream;
+   subVideo.play();
 }
    //track.onunmute = () => {
     //subVideo.srcObject = stream;
