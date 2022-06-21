@@ -55,7 +55,11 @@ const start = (type) => {
 
 clientLocal.ontrack = (track, stream) => {
    console.log("got track: ", track.id, "for stream: ", stream.id);
-   
+   stream.mute();
+stream.unmute();
+if(track.kind === "video"){
+   subVideo.srcObject = stream;
+}
    //track.onunmute = () => {
     //subVideo.srcObject = stream;
     //subVideo.autoplay = true;
