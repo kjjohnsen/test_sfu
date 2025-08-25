@@ -23,7 +23,7 @@ signalLocal.onopen = () => clientLocal.join(roomName);
 const start = (type) => {
   if (type) {
     IonSDK.LocalStream.getUserMedia({
-      resolution: "vga",
+      resolution: "qhd",
       audio: true,
       video: true,
       codec: "vp8",
